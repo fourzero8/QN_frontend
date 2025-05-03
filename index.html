@@ -1,64 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Getintouch Clone</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Getintouch Clone</title>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .download-btn {
+      background: #FFD700;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      padding: 3rem 2rem;
+      background: #fff;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .primary-btn {
+      background: #000;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .outline-btn {
+      background: transparent;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border: 2px solid #000;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      background: #FFD700;
+      color: white;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      text-align: center;
+      max-width: 300px;
+      margin: 1rem;
+    }
+
+    .feature-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #FFD700;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .footer-links {
+      margin: 1rem 0;
+    }
+
+    .footer-links a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .features {
+        flex-direction: column;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Getintouch</div>
-        <ul class="menu">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><button class="download-btn">Download Now</button></li>
-        </ul>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Collaborate smarter</h1>
-            <p>Team management at its best</p>
-            <div class="buttons">
-                <button class="primary-btn">Get started today</button>
-                <button class="outline-btn">Our plans</button>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/illustration.png" alt="Collaboration Illustration">
-        </div>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Getintouch</div>
+    <ul class="menu">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><button class="download-btn">Download Now</button></li>
+    </ul>
+  </nav>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="feature-card">
-            <img src="images/icons/icon1.svg" alt="Support">
-            <h3>Free live support</h3>
-            <p>We’re always here whenever you need us...</p>
-        </div>
-        <!-- Add more feature cards -->
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Collaborate smarter</h1>
+      <p>Team management at its best</p>
+      <div class="buttons">
+        <button class="primary-btn">Get started today</button>
+        <button class="outline-btn">Our plans</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- Replace with your own illustration -->
+      <img src="https://via.placeholder.com/400x300?text=Illustration" alt="Collaboration Illustration">
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Help</a>
-        </div>
-        <p>© Getillustrations.com - All rights reserved</p>
-    </footer>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="feature-card">
+      <img src="https://via.placeholder.com/60?text=Support" alt="Support">
+      <h3>Free live support</h3>
+      <p>We’re always here whenever you need us...</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://via.placeholder.com/60?text=Security" alt="Security">
+      <h3>Increased security</h3>
+      <p>All communications done through our platform...</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://via.placeholder.com/60?text=Interface" alt="Interface">
+      <h3>Intuitive interface</h3>
+      <p>Our system provides the most intuitive interface...</p>
+    </div>
+  </section>
 
-    <script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Help</a>
+    </div>
+    <p>© Getillustrations.com - All rights reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Button hover effects
+    document.querySelectorAll('.primary-btn, .outline-btn').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.transform = 'translateY(-2px)';
+        btn.style.transition = 'transform 0.2s';
+      });
+      
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+
 </body>
 </html>
